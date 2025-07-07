@@ -4,6 +4,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from './screens/HomeScreen';
 import SpeakingCardsScreen from './screens/SpeakingCardsScreen';
 import LogMomentScreen from './screens/LogMomentScreen';
+import SpeakingCardsScreen from './screens/SpeakingCardsScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -18,3 +19,9 @@ export default function App() {
     </NavigationContainer>
   );
 }
+// inside your Stack.Navigator:
+<Stack.Screen
+  name="SpeakingCards"
+  component={SpeakingCardsScreen}
+  options={{ title: 'Speaking Cards' }}
+/>
